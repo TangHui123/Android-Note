@@ -46,3 +46,9 @@ Android Studio升级到2.0后，当build.gradle修改以后，会存在缓存。
 删除.gradle/2.10/目录下的所有文件，然后重启Android Studio。
 
 
+### 5.设置Git命令别名【git config --global alias】
+
+可以为常见的命令起个简单的别名，就不用每次都敲完整命令，比如可以设置：
+status为st，checkout为co ; commit为ci ; branch为br等
+
+> git config --global alias.st status
