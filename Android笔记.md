@@ -16,6 +16,8 @@
  
 	2、大小写切换   crt+shift+U
 	
+	3、复制上面一行内容    crt+alt+down
+	
 	
 ### 3、android 打包签名（应用市场提交app需要加固,加固的apk需要下载下来重新签名）
 
@@ -52,3 +54,34 @@ Android Studio升级到2.0后，当build.gradle修改以后，会存在缓存。
 status为st，checkout为co ; commit为ci ; branch为br等
 
 > git config --global alias.st status
+
+
+### 图片链接
+
+![测试图片](https://ww1.sinaimg.cn/large/006y8lVagw1fbsh5ulxgkj30ow086wfp.jpg)
+
+
+### android 计时器与倒计时
+
+计时器实现
+
+1、timer timerTask 
+
+2、chronometer实现简单
+
+
+倒计时实现控件
+
+	//第一个millisInFuture是指要倒计时的总时间，单位是long ms，第二个参数
+			countDownInterval是指倒计时的频率
+	CountDownTimer downTimer = new CountDownTimer(60*1000, 1000) {
+            @Override
+            public void onTick(long leftTime) {
+                log.v("tag", "time=" + leftTime/1000);
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        };
