@@ -85,3 +85,28 @@ status为st，checkout为co ; commit为ci ; branch为br等
 
             }
         };
+	
+	
+
+Error:Gradle version 2.2 is required. Current version is 2.10. If using the gradle wrapper, try editing the distributionUrl in /Users//Desktop/gradle/wrapper/gradle-wrapper.properties to gradle-2.2-all.zip.问题
+如错误提示，可看出是当前项目的Gradle版本与AS的Gradle版本不一致造成的错误，废话不多说，看解决办法
+1、修改项目中gradle/warpper/gradle-warpper.properties文件中的distributionUrl路劲。如下：
+distributionUrl=https://services.gradle.org/distributions/gradle-2.2-all.zip 
+改： 
+//你本机AS中gradle的版本 
+distributionUrl=https://services.gradle.org/distributions/gradle-2.10-all.zip
+2、修改build.gradle文件中的classpath
+uildscript { 
+… 
+dependencies { 
+classpath ‘com.Android.tools.build:gradle:1.2.3’ 
+} 
+改： 
+//你本机的AS的gradle的版本 
+uildscript { 
+… 
+dependencies { 
+classpath ‘com.android.tools.build:gradle:2.1.0’ 
+}
+3、以上两点完成后，记住别同步，选择File -> Invalidate Caches/Restart…，选Invalidate and Restart即可。
+
