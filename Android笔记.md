@@ -1,6 +1,13 @@
 # Android笔记
 
 
+
+### android studio 命令行gradle 找不到的问题
+
+配置gradle环境变量。。。gradle路径默认在c://user/.gradle/目录下面
+
+
+
 ### 1、Android Studio gradle 升级遇到的问题
 
  ![](https://ww2.sinaimg.cn/large/006y8lVagw1fbsh5tkko8j315o05gtaj.jpg)
